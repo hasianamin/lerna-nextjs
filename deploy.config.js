@@ -11,8 +11,9 @@ module.exports = {
     },
     {
       name: 'JCWD-2104-01-FE',
-      script: './packages/client/.bin/next',
+      script: 'node_modules/.bin/next',
       args: 'start',
+      cwd: '/var/www/html/jcwd-210401.purwadhikabootcamp.com/packages/client',
       instances: 'max',
       exec_mode: 'cluster',
       env: {
