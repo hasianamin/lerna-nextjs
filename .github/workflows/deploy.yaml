@@ -20,7 +20,7 @@ jobs:
       - name: Build Project
         run: |
           npm install
-          npm run build
+          lerna run build --stream
       - name: Deploy BE to Linode
         uses: appleboy/scp-action@master
         with:
