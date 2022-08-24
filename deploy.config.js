@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'JCWD-2104-01-BE', // Format JCWD-{batchcode}-{groupnumber}
-      script: './projects/server/src/index.js',
+      script: './packages/server/src/index.js',
       env: {
         NODE_ENV: 'production',
         PORT: 8401,
@@ -11,8 +11,9 @@ module.exports = {
     },
     {
       name: 'JCWD-2104-01-FE',
-      script: 'node_modules/next/dist/bin/next',
-      args: 'start server',
+      script: 'npm',
+      args: 'start',
+      cwd: '/var/www/html/jcwd-2104-01.purwadhikabootcamp.com',
       instances: 'max',
       exec_mode: 'cluster',
       env: {
