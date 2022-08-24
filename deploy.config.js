@@ -11,7 +11,7 @@ module.exports = {
     },
     {
       name: 'JCWD-2104-01-FE',
-      script: './packages/client/.next',
+      script: './packages/client/.bin/next',
       args: 'start',
       instances: 'max',
       exec_mode: 'cluster',
