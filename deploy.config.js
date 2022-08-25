@@ -15,7 +15,7 @@ module.exports = {
       args: 'start',
       cwd: '/var/www/html/jcwd-210401.purwadhikabootcamp.com/packages/client',
       instances: 'max',
-      exec_mode: 'cluster',
+      watch: false,
       env: {
         NODE_ENV: 'production',
         PORT: 3400,
