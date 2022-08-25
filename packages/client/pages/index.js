@@ -1,8 +1,26 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import axios from '../src/config/api';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  // this is just testing api connection, possibly could be remove
+  const [checkApi, setCheckApi] = useState('');
+  const fetchApi = async () => {
+    try {
+      const result = await axios.get();
+      setCheckApi(result);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchApi();
+  }, []);
+  console.log(checkApi);
+  // end of testing api
+
   return (
     <div className={styles.container}>
       <Head>
@@ -65,5 +83,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
