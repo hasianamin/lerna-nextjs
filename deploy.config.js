@@ -9,17 +9,5 @@ module.exports = {
       },
       time: true,
     },
-    // {
-    //   name: 'JCWD-2104-01-FE',
-    //   script: 'npm',
-    //   args: 'start',
-    //   cwd: '/packages/client',
-    //   instances: 'max',
-    //   exec_mode: 'cluster',
-    //   env: {
-    //     NODE_ENV: 'production',
-    //     PORT: 3400,
-    //   },
-    // },
   ],
 };

@@ -42,4 +42,4 @@ jobs:
             npm install
             pm2 start deploy.config.js
             cd /packages/client
-            pm2 restart JCWD-2104-01-FE
+            pm2 start deploy-fe.config.js
